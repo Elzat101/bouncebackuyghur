@@ -13,22 +13,22 @@ export default async function Project({ params }: Props) {
   return (
     <div>
       <header className="flex items-center justify-between">
-        <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl  drop-shadow font-extrabold">
+        <h1 className="text-black text-5xl  drop-shadow font-extrabold">
           {project.name}
         </h1>
 
         <a
           href={project.url}
-          title="View Project"
+          title="Read More"
           target="_blank"
           className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition"
         >
-          View Project
+          Read More
         </a>
       </header>
 
       {/*content goes here */}
-      <div className="text-lg text-gray-700 mt-S">
+      <div className="text-2xl text-gray-700 mt-14">
         <PortableText value={project.content} />
       </div>
 
