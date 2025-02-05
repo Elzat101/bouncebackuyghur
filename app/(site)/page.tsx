@@ -6,85 +6,104 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div>
-      <h1 className="text-7xl font-extrabold">
-        <span className="bg-gradient-to-r from-gray-900 to-black bg-clip-text text-transparent text-center">
-          Bounceback Uyghur
-        </span>
-      </h1>
+    <div className="w-full overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="bg-gray-100 py-20 w-full">
+        <div className="max-w-6xl mx-auto text-center px-6">
+          <h1 className="text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-900 text-transparent bg-clip-text leading-tight">
+            BounceBack Uyghur
+          </h1>
+          <p className="mt-6 text-lg text-gray-600 font-bold">
+            Advocating for Uyghur children and creating a brighter future.
+          </p>
+        </div>
+      </section>
 
-      <h1 className="text-5xl font-bold mt-12 mb-5 text-center">About Us:</h1>
+      {/* About Section */}
+      <section id="about" className="py-10 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold">Our Mission</h2>
+        <p className="mt-4 text-lg text-gray-700">
+          We support Uyghur children by providing essential resources like
+          clothing and sports equipment, helping them build a brighter future.
+          We strive to create a sense of community and raise awareness about the
+          struggles Uyghur children face. Through advocacy, education, and
+          outreach programs, we hope to inspire positive change and lasting
+          impact.
+        </p>
+      </section>
 
-      <p className="mt-3 text-xl text-gray-600 text-center">
-        Welcome to BounceBack Uyghur, a nonprofit organization committed to
-        supporting Uyghur children in need. Our mission is to provide essential
-        resources such as clothing and sports equipment, helping to improve
-        their quality of life and foster hope for the future. We also hope to
-        educate those on the problems faced by Uyghurs around the world.{" "}
-      </p>
+      {/* Statistics Section */}
+      <section className="bg-blue-100 py-16 w-full">
+        <div className="max-w-6xl mx-auto text-center px-6">
+          <h2 className="text-4xl font-bold">The Uyghur Crisis in Numbers</h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h3 className="text-4xl font-extrabold text-blue-800">
+                1 Million+
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Uyghurs detained in &quot;re-education camps&quot; since 2017.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-extrabold text-blue-800">500,000</h3>
+              <p className="mt-2 text-gray-700">
+                Uyghur children forcibly separated from their families.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-extrabold text-blue-800">20%</h3>
+              <p className="mt-2 text-gray-700">
+                Of global cotton comes from forced Uyghur labor in Xinjiang.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h1 className=" text-5xl font-bold mt-12 mb-5 text-center">
-        Why it matters:
-      </h1>
+      {/* Projects Section */}
+      <section
+        id="projects"
+        className="py-10 px-6 max-w-6xl mx-auto text-center"
+      >
+        <h2 className="text-4xl font-bold">Current Events & News</h2>
+        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <Link
+              href={`/projects/${project.slug}`}
+              key={project._id}
+              className="border-2 border-gray-300 rounded-lg p-4 hover:shadow-xl transition"
+            >
+              {project.image && (
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={750}
+                  height={300}
+                  className="object-cover rounded-lg"
+                />
+              )}
+              <h3 className="mt-3 font-bold text-gray-900">{project.name}</h3>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-      <p className="mt-3 text-xl text-gray-600 text-center">
-        Many Uyghur children face significant hardships, including limited
-        access to basic necessities and opportunities for growth. At BounceBack
-        Uyghur, we believe that every child deserves a chance to thrive. By
-        providing these vital resources, we help them build confidence,
-        resilience, and a brighter future.
-      </p>
-
-      <h1 className="text-5xl font-bold mt-12 mb-5 text-center">
-        {" "}
-        What We Do{" "}
-      </h1>
-
-      <p className="mt-3 text-xl text-gray-600 text-center">
-        <strong>Essential Resources: </strong> Distributing clothing to ensure
-        Uyghur children have the essentials they need for daily life. <br />
-        <strong>Sports for Growth: </strong> Supplying sports equipment to
-        promote physical activity, teamwork, and emotional well-being. <br />
-        <strong>Advocacy & Awareness: </strong> Educating the global community
-        about the Uyghur situation and inspiring collective action.{" "}
-      </p>
-
-      <h1 className="text-5xl font-bold mt-12 mb-5 text-center">
-        {" "}
-        How You Can Help{" "}
-      </h1>
-
-      <p className="mt-3 text-xl text-gray-600 text-center">
-        Your support is vital. Donations of clothing, sports equipment, or
-        financial contributions directly impact the lives of Uyghur children. By
-        partnering with us, you can help create opportunities and provide hope
-        where it’s needed most.
-      </p>
-
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl">
-        Current Events/News:
-      </h2>
-
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <Link
-            href={`/projects/${project.slug}`}
-            key={project._id}
-            className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition"
-          >
-            {project.image && (
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={750}
-                height={300}
-                className="object-cover rounded-lg border border-gray-500"
-              />
-            )}
-            <div className="mt-2 font-bold text-black ">{project.name}</div>
-          </Link>
-        ))}
-      </div>
+      {/* Donate Section */}
+      <section id="donate" className="py-10 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold">How You Can Help</h2>
+        <p className="mt-4 text-lg text-gray-700">
+          Support us by donating clothing, sports equipment, or financial
+          contributions to make a lasting impact on Uyghur children&apos;s
+          lives.
+        </p>
+        <Link
+          href="/donate"
+          className="mt-6 inline-block bg-blue-600 px-6 py-3 text-white font-semibold rounded-lg hover:bg-blue-700"
+        >
+          Donate Now
+        </Link>
+      </section>
     </div>
   );
 }
