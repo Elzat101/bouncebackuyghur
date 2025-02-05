@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       {/* Welcome Section */}
       <section className="text-center bg-gray-100 py-12 px-6 rounded-lg">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-900 text-transparent bg-clip-text mb-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-700 mb-6">
           About Us
         </h1>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
           Welcome to <span className="font-bold">Bounceback Uyghur</span>, a
           nonprofit organization committed to supporting Uyghur children in
           need. Our mission is to provide essential resources such as clothing
@@ -20,10 +20,10 @@ export default function About() {
 
       {/* Why It Matters */}
       <section className="mt-16">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-6">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-6">
           Why It Matters
         </h2>
-        <div className="text-lg text-gray-700 leading-relaxed text-center">
+        <div className="text-lg sm:text-xl text-gray-700 leading-relaxed text-center">
           <p>
             Many Uyghur children face significant hardships, including limited
             access to basic necessities and opportunities for growth. At{" "}
@@ -36,11 +36,11 @@ export default function About() {
       </section>
 
       {/* What We Do */}
-      <section className="mt-16 bg-blue-100 py-12 px-6 rounded-lg">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
+      <section className="mt-16 bg-blue-100 py-12 px-4 sm:px-6 rounded-lg">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">
           What We Do
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-blue-800">
               Essential Resources
@@ -69,17 +69,6 @@ export default function About() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* How You Can Help */}
-      <section className="mt-16 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Get Involved</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Your support is vital. Donations of clothing, sports equipment, or
-          financial contributions directly impact the lives of Uyghur children.
-          By partnering with us, you can help create opportunities and provide
-          hope where it’s needed most.
-        </p>
       </section>
     </div>
   );

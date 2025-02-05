@@ -1,12 +1,12 @@
 export default function Donate() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       {/* Donate Header */}
       <section className="text-center bg-gray-100 py-12 px-6 rounded-lg">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-900 text-transparent bg-clip-text mb-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-700 mb-6">
           Support Our Cause
         </h1>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
           Your generosity can create lasting change in the lives of Uyghur
           children. Help us provide essential resources, promote physical and
           emotional well-being, and raise awareness about the challenges they
@@ -16,10 +16,10 @@ export default function Donate() {
 
       {/* Ways to Donate */}
       <section className="mt-16">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">
           Ways to Donate
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="text-center bg-blue-100 py-8 px-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-blue-800">Donate Online</h3>
             <p className="mt-4 text-gray-700">
@@ -51,8 +51,7 @@ export default function Donate() {
               Other Organizations
             </h3>
             <p className="mt-4 text-gray-700">
-              You can also donate do other organizations who have similar goals
-              to ours.
+              You can also donate to other organizations that share our mission.
             </p>
             <a
               href="/donate/corporate"
@@ -66,8 +65,10 @@ export default function Donate() {
 
       {/* Impact Section */}
       <section className="mt-16 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Your Impact</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          Your Impact
+        </h2>
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
           Every contribution, big or small, makes a difference. Your support
           allows us to provide essentials, foster growth, and spread awareness
           about the Uyghur community’s challenges.

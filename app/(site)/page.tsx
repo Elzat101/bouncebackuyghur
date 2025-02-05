@@ -8,21 +8,29 @@ export default async function Home() {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-gray-100 py-20 w-full">
-        <div className="max-w-6xl mx-auto text-center px-6">
-          <h1 className="text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-900 text-transparent bg-clip-text leading-tight">
-            BounceBack Uyghur
+      <section className="bg-gray-100 py-20 w-full px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <img
+            src="/560A94B4-4817-44EB-AE85-7828F67877F9-removebg-preview.png"
+            alt="Bounce Back Uyghur Logo"
+            className="mx-auto h-32 sm:h-64 lg:h-128 w-auto mb-6"
+          />
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-700 leading-tight">
+            Bounceback Uyghur
           </h1>
-          <p className="mt-6 text-lg text-gray-600 font-bold">
+          <p className="mt-6 text-lg sm:text-xl text-gray-600 font-bold">
             Advocating for Uyghur children and creating a brighter future.
           </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-10 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold">Our Mission</h2>
-        <p className="mt-4 text-lg text-gray-700">
+      <section
+        id="about"
+        className="py-10 px-4 sm:px-6 max-w-6xl mx-auto text-center"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold">Our Mission</h2>
+        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
           We support Uyghur children by providing essential resources like
           clothing and sports equipment, helping them build a brighter future.
           We strive to create a sense of community and raise awareness about the
@@ -33,9 +41,11 @@ export default async function Home() {
       </section>
 
       {/* Statistics Section */}
-      <section className="bg-blue-100 py-16 w-full">
-        <div className="max-w-6xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold">The Uyghur Crisis in Numbers</h2>
+      <section className="bg-blue-100 py-16 w-full px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            The Uyghur Crisis in Numbers
+          </h2>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="text-4xl font-extrabold text-blue-800">
@@ -64,9 +74,11 @@ export default async function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-10 px-6 max-w-6xl mx-auto text-center"
+        className="py-10 px-4 sm:px-6 max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl font-bold">Current Events & News</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold">
+          Current Events &amp; News
+        </h2>
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Link
@@ -90,9 +102,12 @@ export default async function Home() {
       </section>
 
       {/* Donate Section */}
-      <section id="donate" className="py-10 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold">How You Can Help</h2>
-        <p className="mt-4 text-lg text-gray-700">
+      <section
+        id="donate"
+        className="py-10 px-4 sm:px-6 max-w-6xl mx-auto text-center"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold">How You Can Help</h2>
+        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
           Support us by donating clothing, sports equipment, or financial
           contributions to make a lasting impact on Uyghur children&apos;s
           lives.
